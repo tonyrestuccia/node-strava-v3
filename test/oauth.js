@@ -54,7 +54,7 @@ describe('oauth_test', function() {
     // TODO: Figure out a way to get a valid oAuth code for the token exchange
     describe.skip('#getToken()', function () {
         it('should return an access_token', function (done) {
-            strava.oauth.getToken(_tokenExchangeCode,function(err,payload) {
+            strava.oauth.getToken({code:_tokenExchangeCode},function(err,payload) {
                 done();
             });
         });
